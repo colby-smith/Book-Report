@@ -1,12 +1,10 @@
+import time
 def main():
     book_path = "books/frankenstein.txt"
     text = get_book_text(book_path)
     words = text.split()
-    
-    # display_book(text)
-    # count_Words(words)
-    count_characters(text)
 
+    create_report(book_path, count_Words(words))
 
 def get_book_text(path):
     with open (path) as book:
@@ -19,20 +17,26 @@ def count_Words(words):
     word_count = 0
     for word in words:
         word_count += 1
-    print (word_count)
+    return (word_count)
 
 def count_characters(text):
-    chars = {}
+    chars_count = {}
     for c in text:
         lowered = c.lower()
-        if lowered in chars:
-            chars[lowered] += 1
+        if lowered in chars_count:
+            chars_count[lowered] += 1
         else:
-            chars[lowered] = 1
-    print (chars)
+            chars_count[lowered] = 1
+    return (chars_count)
 
 
-
+def create_report(book_path, word_count):
+    print ("--------------------------------------------------")
+    print (f"   Beginning report of {book_path}    ")
+    print ("--------------------------------------------------")
+    print (f"     There is {word_count} words in this document")
+    print ("--------------------------------------------------")
+    
 
 
 
