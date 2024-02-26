@@ -5,28 +5,21 @@ def main():
     chars_dict = count_characters(text)
     word_count = count_Words(words)
     sorted_chars_list = dict_to_List(chars_dict)
-    
     create_report(book_path, word_count, sorted_chars_list)
-    
-    
-    
-### Allows us to create the 'text' variable in main to open the book via it's path. ###
+
 def get_book_text(path):
     with open (path) as book:
         return book.read()
 
-### displays the chosen text to the console. ###
 def display_book(text):
     print (text)
     
-### Counts the number of words contained in the 'text'. ###
 def count_Words(words):
     word_count = 0
     for word in words:
         word_count += 1
     return (word_count)
 
-### Counts the number of characters in the 'text' and stores them in a dictionary. ###
 def count_characters(text):
     chars_dict = {}
     for char in text:
@@ -47,7 +40,6 @@ def dict_to_List(num_chars_dict):
     sorted_chars_list.sort(reverse=True, key=sort_on)
     return sorted_chars_list
 
-### Displays a report on the 'text' to the console using the various functions above. ###
 def create_report(book_path, word_count, sorted_chars_list):
     print ("--------------------------------------------------")
     print (f"   Beginning report of {book_path}    ")
@@ -65,23 +57,5 @@ def create_report(book_path, word_count, sorted_chars_list):
     print ("-------------------------------------------------------------------------")
     print ("................................End Report...............................")
     print ("-------------------------------------------------------------------------")
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 main()
