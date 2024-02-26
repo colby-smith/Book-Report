@@ -1,6 +1,6 @@
 # bookbot
 ## About
-A simple program that takes a text file and creates a report on it, utilising loops, dictionaries, lists and other Python functions. Any text file can be used to produce a report by simply following the usage instructions.
+A simple program that takes a text file and creates a report on it, utilising loops, dictionaries, lists and other Python functions. Any text file can be used to produce a report by simply following the usage instructions. It can outpu the total wordcount in the report, as well as list (in decending order) how many times a character has been used.
 
 ## Prerequisites
 To use this program effectivly make sure you have installed:
