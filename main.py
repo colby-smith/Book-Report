@@ -42,16 +42,16 @@ def dict_to_List(num_chars_dict):
 
 def create_report(book_path, word_count, sorted_chars_list):
     print ("--------------------------------------------------")
-    print (f"   Beginning report of {book_path}    ")
+    print (f".....Beginning report of {book_path}.....")
     print ("--------------------------------------------------")
-    print (f"     There is {word_count} words in this document")
+    print (f".....There is {word_count} words in this document.....")
     print ("--------------------------------------------------")
     print ()
     
     for item in sorted_chars_list:
         if not item["char"].isalpha():
             continue
-        print ("-------------------------------------------------------------------------")
+        print (f"-------------------------------------------------------------------------")
         print (f"     The '{item["char"]}' character was found '{item['num']}' times!")
         print ("-------------------------------------------------------------------------")
     print ("-------------------------------------------------------------------------")
