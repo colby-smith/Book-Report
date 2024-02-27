@@ -1,4 +1,4 @@
-# bookbot
+# Book-Report
 ## About
 A simple program that takes a text file and creates a report on it, utilising loops, dictionaries, lists and other Python functions. Any text file can be used to produce a report by simply following the usage instructions.
 
